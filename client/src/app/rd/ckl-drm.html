@@ -1,0 +1,105 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Delirium</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cns_d_y1"
+                    ng-true-value="'Ensure effective communication. '" 
+                    ng-false-value="''" /> 
+                    Ensure effective communication
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_d_y2"
+                    ng-true-value="'Involve family and friends. '" 
+                    ng-false-value="''" 
+                    > 
+                    Involve family and friends
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_d_y3"
+                    ng-true-value="'Sleep enhancement. '" 
+                    ng-false-value="''" 
+                    > 
+                    Sleep enhancement
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_d_y4"
+                    ng-true-value="'Minimize benzodiazepines. '" 
+                    ng-false-value="''" 
+                    > 
+                    Minimize benzodiazepines
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_d_y5"
+                    ng-true-value="'Start neuroleptics. '" 
+                    ng-false-value="''" 
+                    > 
+                    Start neuroleptics
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cns_d_y6"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cns_d_n1"
+                    ng-true-value="'No delirium detected. '" 
+                    ng-false-value="''" 
+                    /> 
+                    No delirium detected
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_d_n2"
+                    ng-true-value="'Delirium resolved. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Delirium resolved
+            <br>
+            
+        
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cns_d_n3"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

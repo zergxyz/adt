@@ -1,0 +1,89 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Nutrition</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.gi_n_y1"
+                    ng-true-value="'Continue enteral nutrition. '" 
+                    ng-false-value="''" /> 
+                    Continue enteral nutrition
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_n_y2"
+                    ng-true-value="'Start enteral nutrition. '" 
+                    ng-false-value="''" /> 
+                    Start enteral nutrition
+            <br>
+            
+         
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.gi_n_y3"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.gi_n_n1"
+                    ng-true-value="'Ileus. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Ileus
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_n_n2"
+                    ng-true-value="'Aspiration risk. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Aspiration risk
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_n_n3"
+                    ng-true-value="'Surgical contraindication. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Surgical contraindication
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.gi_n_n4"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

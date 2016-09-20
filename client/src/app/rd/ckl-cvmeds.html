@@ -1,0 +1,103 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Review CV medications</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cvs_m_y1"
+                    ng-true-value="'Medication reviewed. '" 
+                    ng-false-value="''" /> 
+                    Medication reviewed
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cvs_m_y2"
+                    ng-true-value="'Continue vasoactive medications. '" 
+                    ng-false-value="''" 
+                    > 
+                    Continue vasoactive medications
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cvs_m_y3"
+                    ng-true-value="'Continue cardiac medications. '" 
+                    ng-false-value="''" 
+                    > 
+                    Continue cardiac medications
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cvs_m_y4"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cvs_m_n1"
+                    ng-true-value="'Stop vasoactive medication. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Stop vasoactive medication
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cvs_m_n2"
+                    ng-true-value="'Wean vasoactive medications. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Wean vasoactive medications
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cvs_m_n3"
+                    ng-true-value="'Stop cardiac medications. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Stop cardiac medications
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cvs_m_n4"
+                    ng-true-value="'Change cardiac medications. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Change cardiac medications
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cvs_m_n5"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

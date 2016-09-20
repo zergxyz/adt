@@ -1,0 +1,82 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Fluid balance</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.kidney_f_y1"
+                    ng-true-value="'Target even fluid balance today. '" 
+                    ng-false-value="''" /> 
+                    Target even fluid balance today
+            <br>
+            
+            <input type="checkbox" ng-model="rd.kidney_f_y2"
+                    ng-true-value="'Target - 0.5L fluid balance today. '" 
+                    ng-false-value="''" /> 
+                    Target - 0.5L fluid balance today
+            <br>
+            
+            <input type="checkbox" ng-model="rd.kidney_f_y3"
+                    ng-true-value="'Target - 1.0L fluid balance today. '" 
+                    ng-false-value="''" /> 
+                    Target - 1.0L fluid balance today
+            <br>
+            
+         
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.kidney_f_y4"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.kidney_f_n1"
+                    ng-true-value="'Active resuscitation. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Active resuscitation
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.kidney_f_n2"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

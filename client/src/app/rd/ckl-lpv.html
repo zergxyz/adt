@@ -1,0 +1,77 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Lung Protective ventilation(LPV)</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.resp_l_y1"
+                    ng-true-value="'LPV strategy in place. '" 
+                    ng-false-value="''" /> 
+                    LPV strategy in place 
+            <br>
+            
+            <input type="checkbox" ng-model="rd.resp_l_y2"
+                    ng-true-value="'Do not exceed 30cm H2O Pplat. '" 
+                    ng-false-value="''" 
+                    > 
+                    Do not exceed 30cm H2O Pplat
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.resp_l_y3"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.resp_l_n1"
+                    ng-true-value="'Patient is not on MV. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Patient is not on MV
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.resp_l_n2"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

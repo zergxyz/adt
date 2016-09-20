@@ -1,0 +1,58 @@
+
+    <div class="container">
+  
+  <div class="page-header">
+    <h3><i class="fa fa-lock" style= "color: #337ab7; ">&nbsp Study Center Verification</i></h3>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      
+      <p>
+          In order to make sure only our CERTAIN study invovled centers can register 
+          new users within the application. The security policy required every new user 
+          to submit their hospital token for verification purpose. You can get your 
+          center's unique hospital token from your local chaimpions or local CERTAIN
+          study contact. If your local champion/contact doesn't know the token, please
+          contact Lei or CERTAIN Metric Group for more information. Thanks for your 
+          participation. 
+      </p>
+      
+    </div>
+    
+    <div class="col-md-6">
+      
+     <form name="form" ng-submit="token.validateToken()" role="form">
+        
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Please type your hospital token</label>
+            <input type="password" name="token" id="token" class="form-control" ng-model="token.token" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Token is required</span>
+        </div>
+       <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || token.dataLoading" class="btn btn-primary">Verify</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQ
+            APIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpD
+            cmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wy
+            klrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCg
+            AAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB
+            4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU
+            7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMI
+            umIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkE
+            CQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe
+            6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEu
+            QradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63
+            P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAA
+            AALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1
+            YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+       
+          
+    </form>
+      
+    </div>
+     
+         
+  </div>
+  
+</div>

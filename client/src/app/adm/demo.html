@@ -1,0 +1,67 @@
+<style>
+.tbcontent {background-color:#fff;
+    max-height: 300px;
+    overflow-y:scroll; 
+}
+</style>
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#/demo">
+            <i class="fa fa-user-md">CER<i class="fa fa-umbrella"></i>AIN</i>
+          </a>
+           <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{demo.user.username}}</a></p>
+        </div>
+       
+      </div>
+  </nav>
+
+<div class="row"  style = "padding-top: 20px;">
+   
+  <div class="col-md-3">
+      
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" class="active"><a href="#"><i class="fa fa-list"></i>&nbspCurrent patients</a></li>
+      <li role="presentation"><a href="#"><i class="fa fa-user-md"></i>&nbsp New patient</a></li>
+      <li><a ng-click =demo.logout()><i class="fa fa-sign-out"></i>&nbspSign out</a></li>
+    </ul>
+
+  </div>
+  <div class="col-md-9">
+      
+
+           <form>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control" placeholder="Search patient" ng-model="synd">
+              </div>      
+            </div>
+          </form>
+          
+         <ul class="list-group">
+           <a href="" ng-click="demo.ptView(adm)" class="list-group-item" ng-repeat="adm in demo.adms">{{adm.ctnID}}</a>
+          <!--<a href="" ng-click="demo.ptView()" class="list-group-item">0012345 <i class="fa fa-registered pull-right" aria-hidden="true" style="color: green"></i></a>-->
+          <!--<a href="#" class="list-group-item">12345</a>-->
+          <!--<a href="#" class="list-group-item">pt323232</a>-->
+          <!--<a href="#" class="list-group-item">pqqwe23234</a>-->
+          <!--<a href="#" class="list-group-item">1245879</a>-->
+        </ul>
+    
+
+  </div>
+
+</div>
+
+
+
+
+ 
+
+</div>

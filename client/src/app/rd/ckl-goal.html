@@ -1,0 +1,102 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Goals of care</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.goal_s_y1"
+                    ng-true-value="'Goals of care clear. '" 
+                    ng-false-value="''" /> 
+                   Goals of care clear
+            <br>
+            
+            <input type="checkbox" ng-model="rd.goal_s_y2"
+                    ng-true-value="'Family conference. '" 
+                    ng-false-value="''" 
+                    > 
+                    Family conference
+            <br>
+            
+            <input type="checkbox" ng-model="rd.goal_s_y3"
+                    ng-true-value="'Palliative care consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    Palliative care consult
+            <br>
+            
+            <input type="checkbox" ng-model="rd.goal_s_y4"
+                    ng-true-value="'Family updated. '" 
+                    ng-false-value="''" 
+                    > 
+                    Family updated
+            <br>
+            <input type="checkbox" ng-model="rd.goal_s_y5"
+                    ng-true-value="'Social worker consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    Social worker consult
+            <br>
+            <input type="checkbox" ng-model="rd.goal_s_y6"
+                    ng-true-value="'Chaplain consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    Chaplain consult
+            <br>
+            <input type="checkbox" ng-model="rd.goal_s_y7"
+                    ng-true-value="'Psychiatry evaluation. '" 
+                    ng-false-value="''" 
+                    > 
+                    Psychiatry evaluation
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.goal_s_y8"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+          
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.goal_s_n1"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

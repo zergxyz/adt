@@ -1,0 +1,98 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Antimicrobials</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.id_a_y1"
+                    ng-true-value="'Continue antimicrobials. '" 
+                    ng-false-value="''" /> 
+                    Continue antimicrobials
+            <br>
+            
+            <input type="checkbox" ng-model="rd.id_a_y2"
+                    ng-true-value="'De-escalate antimicrobials. '" 
+                    ng-false-value="''" 
+                    > 
+                    De-escalate antimicrobials
+            <br>
+            
+            <input type="checkbox" ng-model="rd.id_a_y3"
+                    ng-true-value="'Change coverage. '" 
+                    ng-false-value="''" 
+                    > 
+                    Change coverage
+            <br>
+            
+            <input type="checkbox" ng-model="rd.id_a_y4"
+                    ng-true-value="'Source control. '" 
+                    ng-false-value="''" 
+                    > 
+                    Source control
+            <br>
+            
+            <input type="checkbox" ng-model="rd.id_a_y5"
+                    ng-true-value="'ID consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    ID consult
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.id_a_y6"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.id_a_n1"
+                    ng-true-value="'No antimicrobials ordered. '" 
+                    ng-false-value="''" 
+                    /> 
+                    No antimicrobials ordered
+            <br>
+            
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.id_a_n2"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

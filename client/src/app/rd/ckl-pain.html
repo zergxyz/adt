@@ -1,0 +1,96 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Pain</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cns_p_y1"
+                    ng-true-value="'Start pain medication. '" 
+                    ng-false-value="''" /> 
+                    Start pain medication
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_p_y2"
+                    ng-true-value="'Adjust pain medication. '" 
+                    ng-false-value="''" 
+                    > 
+                    Adjust pain medication
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_p_y3"
+                    ng-true-value="'Pain consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    Pain consult
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cns_p_y4"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.cns_p_n1"
+                    ng-true-value="'No pain. '" 
+                    ng-false-value="''" 
+                    /> 
+                    No pain
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_p_n2"
+                    ng-true-value="'Pain score <3. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Pain score &lt 3
+            <br>
+            
+            <input type="checkbox" ng-model="rd.cns_p_n3"
+                    ng-true-value="'Pain resolved. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Pain resolved
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.cns_p_n4"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

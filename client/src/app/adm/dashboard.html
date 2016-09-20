@@ -1,0 +1,559 @@
+
+<style type="text/css">
+  .timeline {
+    position: relative;
+    padding: 21px 0px 10px;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.timeline .line {
+    position: absolute;
+    width: 4px;
+    display: block;
+    background: currentColor;
+    top: 0px;
+    bottom: 0px;
+    margin-left: 30px;
+}
+
+.timeline .separator {
+    border-top: 1px solid currentColor;
+    padding: 5px;
+    padding-left: 40px;
+    font-style: italic;
+    font-size: .9em;
+    margin-left: 30px;
+}
+
+.timeline .line::before { top: -4px; }
+.timeline .line::after { bottom: -4px; }
+.timeline .line::before,
+.timeline .line::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline .panel {
+    position: relative;
+    margin: 10px 0px 21px 70px;
+    clear: both;
+}
+
+.timeline .panel::before {
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: -24px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: inherit;
+    border-width: 12px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.timeline .panel .panel-heading.icon * { font-size: 20px; vertical-align: middle; line-height: 40px; }
+.timeline .panel .panel-heading.icon {
+    position: absolute;
+    left: -59px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+}
+
+.timeline .panel-outline {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.timeline .panel-outline .panel-body {
+    padding: 0px 0px;
+}
+
+.timeline .panel-outline .panel-heading:not(.icon),
+.timeline .panel-outline .panel-footer {
+    display: none;
+}
+
+</style>
+<div ng-class="asideState.position">
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              
+              <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-default" ng-click="openAside('left', true)">
+                           <a><i class="fa fa-user-md">CER<i class="fa fa-umbrella"></i>AIN</i></a>
+                        </button>
+                    </div>
+                    
+                    <div class="col-md-4" style="font-size: 12pt">
+                           <b>321-23-001 &nbsp Patient, Test</b> 
+                           &nbsp &nbsp 
+                          <button type="button" class="btn btn-default" ng-click="openAside('top', true)">
+                            <i class="fa fa-info-circle"></i>
+                          </button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                           ICU Days &nbsp&nbsp Age: <br>
+                           Height:  &nbsp&nbsp  Weight:
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-default">
+                          <i class="fa fa-newspaper-o"></i>&nbsp Report
+                        </button>
+                        &nbsp &nbsp 
+                         <button type="button" class="btn btn-danger">
+                          <i class="fa fa-wheelchair"></i>Discharge
+                        </button>
+                    </div>
+                    
+
+                </div>
+                <br><br>
+                <div class="row">
+                  <div class="col-md-3">
+                      <div class="panel panel-info" ng-if ="bg.rfa!=''">
+                          <div class="panel-heading">Backgroud <a href="#/bg">
+                              <i class="fa fa-pencil-square-o pull-right"></i></a>
+                          </div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+                            {{bg.rfa}}
+                          </div>
+                           
+                    </div>
+                    
+                    <div class="panel panel-default" ng-if ="bg.rfa==''">
+                          <div class="panel-heading">Backgroud <a href="#/bg">
+                              <i class="fa fa-pencil-square-o pull-right"></i></a>
+                          </div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+                          </div>
+                           
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-3">
+                      <div class="panel panel-danger" ng-if ="symptom!=''">
+                          <div class="panel-heading">Symptoms 
+                              <a href="#/symptom" >
+                                <i class="fa fa-pencil-square-o pull-right"></i></a>
+                          </div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+                                {{ symptom }}
+                          </div>
+                    </div>
+                    <div class="panel panel-default" ng-if ="symptom==''">
+                          <div class="panel-heading">Symptoms 
+                              <a href="#/symptom" >
+                                <i class="fa fa-pencil-square-o pull-right"></i></a>
+                          </div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+                          </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Vitals <a><i class="fa fa-pencil-square-o pull-right"></i></a></div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+      
+                          </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Labs <a><i class="fa fa-pencil-square-o pull-right"></i></a></div>
+                          <div class="panel-body" ng-scrollbars ng-scrollbars-config="bsvl">
+                    
+                          </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    
+                    <div class="panel panel-default" ng-if ="currentPT.synlist.length==0" >
+                      <div class="panel-heading">
+                          
+                              Syndromes 
+                              <a href="#/syndromes">
+                              <i class="fa fa-plus pull-right"></i></a>
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                          <!--<li class="list-group-item" ng-repeat = "syn in currentPT.synlist" -->
+                          <!--ng-click="sc.activeButton(s)"></li>-->
+                          <li class="list-group-item" ng-repeat = "syn in currentPT.synlist">
+                              <a ng-click="synDetail(syn.name)" >{{syn.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-check-square-o pull-right" aria-hidden="true"></i>
+                          </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="panel panel-danger" ng-if ="currentPT.synlist.length!=0" >
+                      <div class="panel-heading">
+                          
+                              Syndromes 
+                               <a href="#/syndromes">
+                              <i class="fa fa-plus pull-right"></i></a>
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                          <!--<li class="list-group-item" ng-repeat = "syn in currentPT.synlist" -->
+                          <!--ng-click="sc.activeButton(s)"></li>-->
+                          <li class="list-group-item" ng-repeat = "syn in currentPT.synlist">
+                              <a ng-click="synDetail(syn.name)" >{{syn.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-check-square-o pull-right" aria-hidden="true"></i>
+                          </li>
+                      </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="panel panel-default" ng-if ="currentPT.intelist.length==0">
+                      <div class="panel-heading">
+                          
+                              Interventions
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                           <li class="list-group-item" ng-repeat = "int in currentPT.intelist">
+                              <a ng-click="synDetail(int.name)" >{{int.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-cart-plus pull-right" aria-hidden="true"
+                              ng-click="orderInts(int.name)"></i>
+                          </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="panel panel-success" ng-if ="currentPT.intelist.length!=0">
+                      <div class="panel-heading">
+                          
+                              Interventions
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                           <li class="list-group-item" ng-repeat = "int in currentPT.intelist">
+                              <a ng-click="synDetail(int.name)" >{{int.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-cart-plus pull-right" aria-hidden="true"
+                              ng-click="orderInts(int.name)"></i>
+                          </li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-6" >
+                    
+                    <uib-tabset type="pills">
+                        <uib-tab heading="Orders">
+                            <br>
+                            <!-- Timeline -->
+    <div class="timeline" ng-scrollbars ng-scrollbars-config="orderconfig">
+    
+        <!-- Line component -->
+        <div class="line text-muted"></div>
+
+        <!-- Separator -->
+        <div class="separator text-muted">
+            As of Today
+        </div>
+        <!-- /Separator -->
+    
+        <!-- Panel -->
+        <article class="panel panel-info panel-outline" 
+        ng-repeat = "od in currentPT.orders | orderBy:'orderTime':true" >
+            <div class="panel-heading icon" ng-if="od.type == 'medication'">
+                <img src="assets/images/medication.jpg" width="40px" height="40px"></img>
+            </div>
+             <div class="panel-heading icon" ng-if="od.type == 'intervention'">
+                <img src="assets/images/intervention.jpg" width="40px" height="40px"></img>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+                {{od.name}} <strong>Ordered</strong> 
+                &nbsp<button type="button" class="btn btn-success btn-xs"
+                ng-click="completeOrder(od)">complete</button>
+                &nbsp<button type="button" class="btn btn-danger btn-xs">delete</button>
+                <div class="text-muted">
+                    <time>{{od.orderTime}}</time> 
+                    by {{od.user}}
+                </div>
+            </div>
+        </article>
+    
+        <!--<article class="panel panel-info panel-outline">-->
+    
+            <!-- Icon -->
+        <!--    <div class="panel-heading icon">-->
+        <!--        <i class="glyphicon glyphicon-user"></i>-->
+        <!--    </div>-->
+            <!-- /Icon -->
+    
+            <!-- Body -->
+        <!--    <div class="panel-body">-->
+        <!--        Assigned to Developer Group <strong>5 Days</strong>-->
+        <!--        <div class="text-muted">-->
+        <!--    <time>1/10/2015</time>-->
+        <!--    <orderlist></orderlist>-->
+        <!--</div>-->
+        <!--    </div>-->
+            
+            <!-- /Body -->
+    
+        <!--</article>-->
+        
+        <!--<article class="panel panel-danger panel-outline">-->
+    
+            <!-- Icon -->
+        <!--    <div class="panel-heading icon">-->
+        <!--        <i class="glyphicon glyphicon-exclamation-sign"></i>-->
+        <!--    </div>-->
+            <!-- /Icon -->
+    
+            <!-- Body -->
+        <!--    <div class="panel-body">-->
+            
+        <!--        SLA Violated <strong>2 Days</strong>-->
+        <!--        <div class="text-muted">-->
+        <!--    <time>1/12/2015</time>-->
+        <!--</div>-->
+        <!--    </div>-->
+            <!-- /Body -->
+    
+        <!--</article>-->
+    
+        <!-- Panel -->
+        <!--<article class="panel panel-info panel-outline">-->
+    
+            <!-- Icon -->
+        <!--    <div class="panel-heading icon">-->
+        <!--        <i class="glyphicon glyphicon-info-sign"></i>-->
+        <!--    </div>-->
+            <!-- /Icon -->
+    
+            <!-- Body -->
+        <!--    <div class="panel-body">-->
+        <!--        Ticket Closed <strong>8 days</strong>-->
+        <!--        <div class="text-muted">-->
+        <!--    <time>1/20/2015</time>-->
+        <!--</div>-->
+        <!--    </div>-->
+            <!-- /Body -->
+    
+        <!--</article>-->
+        <!-- /Panel -->
+    
+    </div>
+    <!-- /Timeline -->
+                            <!--<div class="panel panel-primary">-->
+                            <!--<div class="panel-body" ng-scrollbars ng-scrollbars-config="orderconfig">-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--        Panel content <br>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                       
+                        </uib-tab>
+                        <uib-tab heading="Completed Actions"><br>
+
+                        <div class="timeline" ng-scrollbars ng-scrollbars-config="orderconfig">
+                            <!-- Line component -->
+                            <div class="line text-muted"></div>
+                            <!-- Separator -->
+                            <div class="separator text-muted">
+                                    As of Today
+                            </div>
+                            
+                            <!-- Panel -->
+                            <article class="panel panel-info panel-outline" 
+                            ng-repeat = "cp in currentPT.cplist | orderBy:'cpTime':true" >
+                                <div class="panel-heading icon" ng-if="cp.type == 'medication'">
+                                    <img src="assets/images/medication.jpg" width="40px" height="40px"></img>
+                                </div>
+                                 <div class="panel-heading icon" ng-if="cp.type == 'intervention'">
+                                    <img src="assets/images/intervention.jpg" width="40px" height="40px"></img>
+                                </div>
+                                <!-- /Icon -->
+                        
+                                <!-- Body -->
+                                <div class="panel-body">
+                                    {{cp.name}} <strong>Completed</strong> 
+                                    &nbsp<button type="button" class="btn btn-danger btn-xs">delete</button>
+                                    <div class="text-muted">
+                                        <time>{{cp.cpTime}}</time> 
+                                        by {{cp.user}}
+                                    </div>
+                                </div>
+                            </article>
+                            
+                        </div>
+                            
+                        </uib-tab>
+                    </uib-tabset>
+                    <br>
+                    <div class = "row">
+                        <div class="col-md-4">
+                          <div class="panel panel-default">
+                              <div class="panel-body">
+                                Whiteboard Notes
+                              </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="panel panel-default">
+                              <div class="panel-body">
+                                <div id="time"></div>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="panel panel-default">
+                              <div class="panel-body">
+                                CPR Algorithms
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                       
+                  </div>
+                  <!--<div class="col-md-3">-->
+                    
+                  <!-- <div class="panel panel-primary">-->
+                  <!--    <div class="panel-heading">Completed</div>-->
+                  <!--    <div class="panel-body">-->
+                  <!--      Panel content <br>-->
+                  <!--      Panel content <br>-->
+                  <!--      Panel content <br>-->
+                  <!--      Panel content <br>-->
+                  <!--    </div>-->
+                  <!--  </div>-->
+
+                       
+                  <!--</div>-->
+                  <div class="col-md-3">
+                      
+                       <div class="panel panel-default" ng-if="currentPT.medlist.length==0">
+                      <div class="panel-heading">
+                          
+                              Medications
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                         <li class="list-group-item" ng-repeat = "med in currentPT.medlist">
+                              <a ng-click="synDetail(med.name)" >{{med.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-cart-plus pull-right" aria-hidden="true" 
+                              ng-click="orderMeds(med.name)"></i> 
+                          </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="panel panel-success" ng-if="currentPT.medlist.length!=0">
+                      <div class="panel-heading">
+                          
+                              Medications
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                         <li class="list-group-item" ng-repeat = "med in currentPT.medlist">
+                              <a ng-click="synDetail(med.name)" >{{med.name}}</a>
+                              <i class="fa fa-trash pull-right" aria-hidden="true" ng-click="alert()"></i>
+                              <i class="fa fa-cart-plus pull-right" aria-hidden="true" 
+                              ng-click="orderMeds(med.name)"></i> 
+                          </li>
+                      </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                      <div class="panel-heading" >
+                          
+                              Findings
+                      </div>
+                      <ul class="list-group" ng-scrollbars ng-scrollbars-config="smif">
+                      </ul>
+                    </div>
+                      
+                      
+                  </div>
+                </div>
+                <!--<div class="row">-->
+                <!--  <div class="col-md-4">.col-md-4</div>-->
+                <!--  <div class="col-md-4">.col-md-4</div>-->
+                <!--  <div class="col-md-4">.col-md-4</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                <!--  <div class="col-md-6">.col-md-6</div>-->
+                <!--  <div class="col-md-6">.col-md-6</div>-->
+                <!--</div>-->
+                
+                
+                
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        
+    <!--    <div class="jumbotron panel panel-default">-->
+    <!--    <p>-->
+    <!--      <span class="pull-left">-->
+           
+    <!--        <button type="button" class="btn btn-default btn-lg" ng-click="openAside('top', true)">-->
+    <!--          Up <span class="glyphicon glyphicon-arrow-down"></span>-->
+    <!--        </button>-->
+    <!--      </span>-->
+    <!--      <span class="pull-right">-->
+    <!--        <button type="button" class="btn btn-default btn-lg" ng-click="openAside('bottom', true)">-->
+    <!--          Down <span class="glyphicon glyphicon-arrow-up"></span>-->
+    <!--        </button>-->
+    <!--        <button type="button" class="btn btn-default btn-lg" ng-click="openAside('right', false)">-->
+    <!--          Right <span class="glyphicon glyphicon-align-justify"></span>-->
+    <!--        </button>-->
+    <!--      </span>-->
+    <!--    </p>-->
+
+    <!--  </div>-->
+      
+    <!--  <div>-->
+
+
+    <!--<button type="button" class="btn btn-default" ng-click="open()">Open me!</button>-->
+  
+</div>
+
+    </div>
+
+
+                       <!--<div class="panel panel-primary">-->
+                       <!--     <div class="panel-body" ng-scrollbars ng-scrollbars-config="orderconfig">-->
+                       <!--             Panel content <br>-->
+                       <!--             Panel content <br>-->
+                       <!--             Panel content <br>-->
+                       <!--             Panel content <br>-->
+                       <!--     </div>-->
+                       <!--     </div>-->

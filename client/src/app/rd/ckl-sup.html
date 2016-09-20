@@ -1,0 +1,91 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Stress Ulcer prophylaxis</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.gi_s_y1"
+                    ng-true-value="'Continue stress ulcer prophylaxis. '" 
+                    ng-false-value="''" /> 
+                    Continue stress ulcer prophylaxis
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_s_y2"
+                    ng-true-value="'Start sucralfate. '" 
+                    ng-false-value="''" 
+                    > 
+                    Start sucralfate
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_s_y3"
+                    ng-true-value="'Start H2 receptor blockers. '" 
+                    ng-false-value="''" 
+                    > 
+                    Start H2 receptor blockers
+            <br>
+            
+            <input type="checkbox" ng-model="rd.gi_s_y4"
+                    ng-true-value="'Start proton pump inhibitors. '" 
+                    ng-false-value="''" 
+                    > 
+                    Start proton pump inhibitors
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.gi_s_y5"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.gi_s_n1"
+                    ng-true-value="'Ulcer prophylaxis is not indicated. '" 
+                    ng-false-value="''" 
+                    /> 
+                    Ulcer prophylaxis is not indicated
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.gi_s_n2"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 

@@ -1,0 +1,118 @@
+<div class="container">
+  
+  <div class="page-header">
+    <h4>Benchmark report</h4>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  Weekly Active Users
+                </div>
+                <div class="panel-body">
+                    <canvas id="polar-area" class="chart chart-polar-area"
+                      chart-data="acusers" chart-labels="aculabels"
+                      chart-legend="true">
+                    </canvas> 
+                </div>
+          </div>
+      </div>
+      
+      <div class="col-md-6">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  Weekly New Users
+                </div>
+                <div class="panel-body">
+                    <canvas id="polar-area" class="chart chart-polar-area"
+                      chart-data="acusers" chart-labels="aculabels"
+                      chart-legend="true">
+                    </canvas> 
+                </div>
+          </div>
+      </div>
+
+         
+  </div>
+  
+  
+    <div class="row">
+      <div class="col-md-12">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  Weekly patient admissions
+                </div>
+                <div class="panel-body">
+                  <div class="col-md-6">
+                    <table class="table">
+                      <thead>
+                          <tr>
+                              <th>Your center</th>
+                              <th>Total centers </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>100</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <canvas id="line" class="chart chart-line" chart-data="data"
+                      chart-labels="labels" chart-legend="true" chart-series="series"
+                      chart-click="onClick" >
+                    </canvas> 
+                  </div>
+                
+                </div>
+          </div>
+      </div>
+       
+      <!---->
+       
+          
+      <!--</div>-->
+         
+  </div>
+  
+  
+  <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  Weekly rounding days
+                </div>
+                <div class="panel-body">
+                  <table class="table">
+        <thead>
+            <tr>
+                <th>Your center</th>
+                <th>Total centers </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+                </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <canvas id="line" class="chart chart-line" chart-data="data"
+          chart-labels="labels" chart-legend="true" chart-series="series"
+          chart-click="onClick" >
+        </canvas> 
+          
+      </div>
+         
+  </div>
+  
+  
+  
+</div>

@@ -1,0 +1,67 @@
+  <div class="modal-header">
+
+    	<ul class="nav nav-pills pull-right">
+    	  <li ui-sref-active="active">
+    	    <a ui-sref=".cardic" data-toggle="pill">I.C.</a>
+    	  </li >
+    	  <li ui-sref-active="active">
+    	    <a ui-sref=".cardmas" data-toggle="pill">M.A.S.</a>
+    	  </li>
+    	  <li ui-sref-active="active">
+    	    <a ui-sref=".cardcau" data-toggle="pill">Caution</a>
+    	  </li >
+    	  <li ui-sref-active="active">
+    	    <a ui-sref=".cardalgo" data-toggle="pill">Algorithm</a>
+    	  </li>
+    	  <li ui-sref-active="active">
+    	    <a ui-sref=".cardref" data-toggle="pill">Ref</a>
+    	  </li>
+    	  
+    	</ul>
+    	<!--<h4>{{cardName}}</h4>	-->
+    
+</div>
+<div class="modal-body">
+  <div class="row">
+  
+      <div class="col-md-9">
+         <div id="form-views" ui-view></div>
+  </div>
+  
+  <div class="col-md-3">
+      
+    <div class="panel panel-default" >
+        <div class="panel-heading">
+              Suggested Medication
+        </div>
+        <ul class="list-group" >
+          <li class="list-group-item" ng-class="{'btnactive': m.isActive}"
+          ng-repeat = "m in meds"
+          ng-click="addMeds(m)">{{m.name}}
+  &nbsp&nbsp<i ng-if="m.isActive" class="fa fa-check" aria-hidden="true"></i>
+  </li>
+        </ul>
+    </div>
+    <div class="panel panel-default" >
+        <div class="panel-heading">
+              Suggested Intervention
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item" ng-class="{'btnactive': i.isActive}"
+          ng-repeat = "i in ints"
+          ng-click="addInts(i)">{{i.name}}
+  &nbsp&nbsp<i ng-if="i.isActive" class="fa fa-check" aria-hidden="true"></i>
+  </li>
+        </ul>
+    </div>
+
+  </div>
+
+</div>
+  
+  
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

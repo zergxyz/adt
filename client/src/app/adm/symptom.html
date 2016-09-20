@@ -1,0 +1,138 @@
+<div class="container-fluid">
+
+
+ <div class="container">
+  
+    <div class="page-header">
+    <h4><img src="assets/images/AMPLE.jpg" width='30px', height = '30px'> &nbsp&nbsp</img>Symptoms (ABCDE)</h4>
+  </div>
+  
+  
+
+<div class="row"  style = "padding-top: 20px;">
+  
+  <div class="col-md-3">
+    <div class="panel panel-default" >
+        <div class="panel-heading">A</div>
+            <div class="panel-body">
+                <li class="list-group-item" 
+                ng-class="{'btndanger': abcde.a1.isActive}" ng-click="abcde.activate(abcde.a1)">
+                    {{abcde.a1.name}}</li> 
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.a2.isActive}" ng-click="abcde.activate(abcde.a2)">
+                    {{abcde.a2.name}}</li> 
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.a3.isActive}" ng-click="abcde.activate(abcde.a3)">
+                    {{abcde.a3.name}}</li> 
+            </div>
+    </div>
+  </div>
+  
+  <div class="col-md-3">
+    <div class="panel panel-default" >
+        <div class="panel-heading">B</div>
+            <div class="panel-body">
+                <li class="list-group-item" 
+                ng-class="{'btndanger': abcde.b1.isActive}" ng-click="abcde.activate(abcde.b1)">
+                    {{abcde.b1.name}}</li> 
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.b2.isActive}" ng-click="abcde.activate(abcde.b2)">
+                    {{abcde.b2.name}}</li> 
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.b3.isActive}" ng-click="abcde.activate(abcde.b3)">
+                    {{abcde.b3.name}}</li> 
+            </div>
+    </div>
+  </div>
+  
+   <div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">C</div>
+            <div class="panel-body">
+                <li class="list-group-item"> 
+                    <dropdown is-button 
+                        ng-model="abcde.c" 
+                        items="abcde.cs" 
+                        callback="abcde.callback(item)">
+                    </dropdown>
+                    <div ng-show="abcde.c.name=='Other'">
+                        <input ng-model="abcde.Cother" type="text" name=""/>
+                    </div>
+                 </li>
+                 <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.c2.isActive}" ng-click="abcde.activate(abcde.c2)">
+                    {{abcde.c2.name}}</li>
+                <li class="list-group-item" 
+                ng-class="{'btndanger': abcde.c3.isActive}" ng-click="abcde.activate(abcde.c3)">
+                    {{abcde.c3.name}}</li>
+                 
+
+                    
+            </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-default" >
+        <div class="panel-heading">D</div>
+            <div class="panel-body">
+                
+                <li class="list-group-item"> 
+                    <dropdown is-button 
+                        ng-model="abcde.d" 
+                        items="abcde.ds" 
+                        callback="abcde.callback(item)">
+                    </dropdown>
+                    <div ng-show="abcde.d.name=='Other'">
+                        <input ng-model="abcde.Dother" type="text" name=""/>
+                    </div>
+                </li>
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.d2.isActive}" ng-click="abcde.activate(abcde.d2)">
+                    {{abcde.d2.name}}</li>
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.d3.isActive}" ng-click="abcde.activate(abcde.d3)">
+                    {{abcde.d3.name}}</li>
+                 
+            </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">E</div>
+            <div class="panel-body">
+            
+                <li class="list-group-item" 
+                ng-class="{'btnwarning': abcde.e1.isActive}" ng-click="abcde.activate(abcde.e1)">
+                    {{abcde.e1.name}}</li>
+                <li class="list-group-item" 
+                ng-class="{'btndanger': abcde.e2.isActive}" ng-click="abcde.activate(abcde.e2)">
+                    {{abcde.e2.name}}</li>
+                <li class="list-group-item"> 
+                    <dropdown is-button 
+                        ng-model="abcde.e" 
+                        items="abcde.es" 
+                        callback="abcde.callback(item)">
+                    </dropdown>
+                    <div ng-show="abcde.e.name=='Other'">
+                        <input ng-model="abcde.Eother" type="text" name=""/>
+                    </div>
+                </li>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ 
+
+</div>

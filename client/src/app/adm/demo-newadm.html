@@ -1,0 +1,149 @@
+<style>
+.tbcontent {background-color:#fff;
+    max-height: 300px;
+    overflow-y:scroll; 
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+</style>
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#/demo">
+            <i class="fa fa-user-md">CER<i class="fa fa-umbrella"></i>AIN</i>
+          </a>
+           <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"></a></p>
+        </div>
+       
+      </div>
+  </nav>
+
+<div class="row"  style = "padding-top: 20px;">
+   
+  <div class="col-md-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" ><a href="#"><i class="fa fa-list"></i>&nbspCurrent patients</a></li>
+      <li role="presentation" class="active"><a href="#"><i class="fa fa-user-md"></i>&nbsp New patient</a></li>
+      <li><a ng-click =demo.logout()><i class="fa fa-sign-out"></i>&nbspSign out</a></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="row"> 
+      <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="Clinic No." autofocus="autofocus" 
+       ng-model="na.adm.ctnID" ng-value="na.adm.ctnID">
+      </div>
+    </div>
+    <hr class="colorgraph">
+    
+      <div class="row">
+          <div class="col-sm-4">
+              <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus 
+                ng-model="na.adm.firstName" ng-value="na.adm.firstName">
+          </div>
+          <div class="col-sm-4">
+              <input type="text" id="middleName" placeholder="Middle Name" class="form-control" autofocus 
+              ng-model="na.adm.middleName" ng-value="na.adm.middleName">
+          </div>
+          <div class="col-sm-4">
+              <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus 
+               ng-model="na.adm.lastName" ng-value="na.adm.lastName" >
+          </div>
+      </div><br>
+      
+      <div class="row">
+          <div class="col-sm-4">
+              <input type="text" placeholder="Age" class="form-control" autofocus 
+              ng-model="na.adm.age" ng-value="na.adm.age" >
+          </div>
+          <div class="col-sm-4">
+            <div>
+                <select id="country" class="form-control" ng-model="na.adm.gender" ng-value="na.adm.gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+          </div>
+      </div><br>
+      
+      <div class="row">
+          <div class="col-sm-4">
+              <input type="text" placeholder="Height" class="form-control" autofocus 
+              ng-model="na.adm.height" ng-value="na.adm.height">
+          </div>
+          <div class="col-sm-4">
+             <input type="text" placeholder="Weight" class="form-control" autofocus 
+              ng-model="na.adm.weight" ng-value="na.adm.weight">
+          </div>
+      </div><br>
+      
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Blood type</label>
+          <div>
+              <select id="bloodType" class="form-control" 
+              ng-model="na.adm.bloodType" ng-value="na.adm.bloodType">
+                  <option>A</option>
+                  <option>B</option>
+              </select>
+          </div>
+        </div>
+        <div class="col-sm-4">
+            <label >Code status</label>
+                  <div>
+                      <select id="codeStatus" class="form-control" 
+                      ng-model="na.adm.codeStatus" ng-value="na.adm.codeStatus" >
+                          <option>A</option>
+                          <option>B</option>
+                      </select>
+                  </div>
+        </div>
+        <div class="col-sm-4">
+          </div>
+      </div><br>
+
+
+      <div class="row">
+          <div class="col-sm-3">
+              <button type="submit" class="btn btn-success btn-block" 
+                ng-click="na.saveNewAdm(na.adm)"
+                ng-if="!na.readmission">Register</button>
+              <button type="submit" class="btn btn-primary btn-block" 
+                ng-click="na.reAdmit(na.adm)"
+                ng-if="na.readmission">Re-admit</button>
+          </div>
+      </div>
+
+ <!--<button type="button" class="btn btn-success" ng-click="rd.finishRD()" ng-if="!rd.rdData.printFlag">-->
+ <!--             <i class="fa fa-check"></i>Finish-->
+ <!--           </button>-->
+ <!--           <button type="button" class="btn btn-primary" ng-click="rd.printRD()", ng-if="rd.rdData.printFlag">-->
+ <!--             <i class="fa fa-print"></i>Print-->
+ <!--           </button>-->
+    
+
+  </div>
+
+</div>
+
+
+
+
+ 
+
+</div>

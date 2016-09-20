@@ -1,0 +1,105 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Physical therapy</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.pt_p_y1"
+                    ng-true-value="'Mobilize as tolerated. '" 
+                    ng-false-value="''" /> 
+                    Mobilize as tolerated
+            <br>
+            
+            <input type="checkbox" ng-model="rd.pt_p_y2"
+                    ng-true-value="'PT/OT consult. '" 
+                    ng-false-value="''" 
+                    > 
+                    PT/OT consult
+            <br>
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.pt_p_y3"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+         <input type="checkbox" ng-model="rd.pt_p_n1"
+                    ng-true-value="'Mobilization contraindicated. '" 
+                    ng-false-value="''" 
+                    > 
+                    Mobilization contraindicated
+            <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.pt_p_n2"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  <!--      <div class="wizard"><div class="wizard-inner">-->
+  <!--     <uib-tabset active="active">-->
+  <!--  <uib-tab index="0" heading="YES" active="tab.active">-->
+       
+  <!--      <div class="form-group col-md-5 col-md-offset-3">-->
+  <!--          <input type="checkbox" ng-model="rd.cns_sb_y1"-->
+  <!--                  ng-true-value="'Stop sedative infusion'" -->
+  <!--                  ng-false-value="''" -->
+  <!--                  ng-init="rd.cns_sb_y1=''" -->
+  <!--                  ng-click="SB()"/> -->
+  <!--                  Stop sedative infusion -->
+  <!--          <br>-->
+            
+  <!--          <input type="checkbox" ng-model="rd.cns_sb_y2"-->
+  <!--                  ng-true-value="'Assess sedation needs'" -->
+  <!--                  ng-false-value="''" -->
+  <!--                  ng-init="rd.cns_sb_y2=''" -->
+  <!--                  ng-click="SB()"> -->
+  <!--                  Assess sedation needs-->
+  <!--          <br>-->
+  <!--      </div>-->
+     
+          
+          
+  <!--  </uib-tab>-->
+  <!--  <uib-tab index="1" heading="NO" >-->
+  <!--    Others-->
+  <!--  </uib-tab>-->
+  <!--</uib-tabset> </div></div>-->
+  
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+    <!--<button class="btn btn-warning" ng-click="cancel($event)">Close</button>-->
+</div> 
+ 
+ 

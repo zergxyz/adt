@@ -1,0 +1,150 @@
+<div class="container-fluid">
+ <br>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-default" >
+               <a href="#/dashboard"><i class="fa fa-user-md">CER<i class="fa fa-umbrella"></i>AIN</i></a>
+            </button>
+        </div>
+        <div class="col-md-4" style="font-size: 12pt">
+               <b>321-23-001 &nbsp Patient, Test</b> 
+        </div>
+        <div class="col-md-3">
+               ICU Days &nbsp&nbsp Age: <br>
+               Height:  &nbsp&nbsp  Weight: 
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success" ng-click="rd.finishRD()" ng-if="!rd.rdData.printFlag">
+              <i class="fa fa-check"></i>Finish
+            </button>
+            <button type="button" class="btn btn-primary" ng-click="rd.printRD()", ng-if="rd.rdData.printFlag">
+              <i class="fa fa-print"></i>Print
+            </button>
+            &nbsp &nbsp 
+             <button type="button" class="btn btn-danger">
+              <i class="fa fa-wheelchair"></i>Discharge
+            </button>
+        </div>
+    </div>
+    
+	<div class="row">
+	 <div class="col-md-6">
+       <div class="page-header" style="margin: 20px 0 0px; " >
+        <img src="assets/images/cns.png" width="22px" height="22px"></img> &nbsp CNS &nbsp
+          <i ng-if="rd.rdData.sedationBreak&&rd.rdData.delirium&&rd.rdData.pain" 
+          class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a ng-click="rd.openSB()">Sedation Break: </a>{{rd.rdData.sedationBreak}} <br>
+       <a href="" ng-click="rd.openDrm()">Delirium: </a>{{rd.rdData.delirium}} <br>
+       <a href="" ng-click="rd.openPain()">Pain: </a>{{rd.rdData.pain}} 
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/cvs.png" width="22px" height="22px"></img> &nbsp CVS &nbsp
+          <i ng-if="rd.rdData.cvMeds" 
+          class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openCVMeds()">CV Medications: </a>{{rd.rdData.cvMeds}} 
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/resp.png" width="22px" height="22px"></img> &nbsp Respiratory &nbsp
+          <i ng-if="rd.rdData.lpv&&rd.rdData.spb&&rd.rdData.hob" 
+          class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openLPV()">LPV: </a>{{rd.rdData.lpv}}  <br>
+       <a href="" ng-click="rd.openSPB()">SPB: </a>{{rd.rdData.spb}}  <br>
+       <a href="" ng-click="rd.openHOB()">Head of bed: </a>{{rd.rdData.hob}}  
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/neph.png" width="22px" height="22px"></img> &nbsp Nephrology &nbsp
+          <i ng-if="rd.rdData.fluid&&rd.rdData.electrolyte" 
+          class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openFluid()">Fluid: </a>{{rd.rdData.fluid}} <br>
+       <a href="" ng-click="rd.openElectrolyte()">Electrolytes: </a>{{rd.rdData.electrolyte}}
+    
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/gi.png" width="22px" height="22px"></img> &nbsp GI &nbsp
+          <i ng-if="rd.rdData.glucose&&rd.rdData.sup&&rd.rdData.nutrition" 
+          class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openGlu()">Glucose: </a>{{rd.rdData.glucose}} <br>
+       <a href="" ng-click="rd.openSup()">Stress ulcer propylaxis: </a>{{rd.rdData.sup}} <br>
+       <a href="" ng-click="rd.openNutrition()">Nutrition</a>{{rd.rdData.nutrition}} 
+       
+        <div class="page-header" style="margin: 20px 0 0px;" >
+        <img src="assets/images/hemo.png" width="22px" height="22px"></img> &nbsp Hemotology &nbsp
+          <i ng-if="rd.rdData.dvt" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openDVT()">DVT: </a>{{rd.rdData.dvt}} 
+
+
+  </div>
+  
+  
+  <div class="col-md-6">
+      
+        <!--<div id="checklist-views" ui-view></div>-->
+       
+       
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/id.jpg" width="22px" height="22px"></img> &nbsp Infectious disease &nbsp
+          <i ng-if="rd.rdData.antibio" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openAnti()">Antimicrobials: </a>{{rd.rdData.antibio}}
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/skin.jpg" width="22px" height="22px"></img> &nbsp Skin &nbsp
+          <i ng-if="rd.rdData.skin" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openSkin()">Skin: </a> {{rd.rdData.skin}}
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/medication.jpg" width="22px" height="22px"></img> &nbsp Medication &nbsp
+          <i ng-if="rd.rdData.meds" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openMeds()">Medication review: </a> {{rd.rdData.meds}}
+    
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/device.jpg" width="22px" height="22px"></img> &nbsp Devices &nbsp
+          <i ng-if="rd.rdData.devices" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openDvc()">Devices</a> {{rd.rdData.devices}} 
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/pt.jpg" width="22px" height="22px"></img> &nbsp Physical therapy &nbsp
+          <i ng-if="rd.rdData.pt" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openPT()">Physical therapy: </a> {{rd.rdData.pt}}
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/goal.jpg" width="22px" height="22px"></img> &nbsp Socials &nbsp
+          <i ng-if="rd.rdData.goal" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openGoal()">Goals of care: </a> {{rd.rdData.goal}}
+       
+       <div class="page-header" style="margin: 20px 0 0px;" >
+         <img src="assets/images/discharge.png" width="22px" height="22px"></img> &nbsp ICU discharge &nbsp
+          <i ng-if="rd.rdData.icuDischarge" class="fa fa-check" aria-hidden="true" 
+          style="color: green"></i>
+       </div>
+       <a href="" ng-click="rd.openDischarge()">ICU discharge: </a>{{rd.rdData.icuDischarge}} 
+
+  </div>
+	    
+
+
+   </div>
+</div>

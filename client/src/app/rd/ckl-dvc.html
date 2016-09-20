@@ -1,0 +1,102 @@
+<style> 
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Devices</h4>
+</div>
+
+
+<div class="modal-body"> 
+
+<uib-tabset type="pills">
+    
+      <uib-tab heading="Yes">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.dev_d_y1"
+                    ng-true-value="'Review all devices. '" 
+                    ng-false-value="''" /> 
+                    Review all devices
+            <br>
+            
+            <input type="checkbox" ng-model="rd.dev_d_y2"
+                    ng-true-value="'Remove urinary catheter. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove urinary catheter
+            <br>
+            
+            <input type="checkbox" ng-model="rd.dev_d_y3"
+                    ng-true-value="'Remove arterial catheter. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove arterial catheter
+            <br>
+            
+            <input type="checkbox" ng-model="rd.dev_d_y4"
+                    ng-true-value="'Remove venous catheter. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove venous catheter
+            <br>
+            <input type="checkbox" ng-model="rd.dev_d_y5"
+                    ng-true-value="'Remove central catheter. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove central catheter
+            <br>
+            <input type="checkbox" ng-model="rd.dev_d_y6"
+                    ng-true-value="'Remove chest tube. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove chest tube
+            <br>
+            <input type="checkbox" ng-model="rd.dev_d_y7"
+                    ng-true-value="'Remove ET tube. '" 
+                    ng-false-value="''" 
+                    > 
+                    Remove ET tube
+            <br>
+            
+            
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.dev_d_y8"></textarea>
+            </label>
+            
+        </div>
+    </uib-tab>
+    <uib-tab heading="No">
+        <br>
+        <div class="form-group col-md-5 col-md-offset-4">
+          
+            <label class="item item-input">
+                <textarea placeholder="Others"  ng-model ="rd.dev_d_n1"></textarea>
+            </label>
+        </div>
+    </uib-tab>
+  
+</uib-tabset>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+</div>
+    
+
+
+
+  
+  
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div> 
+ 
+ 
