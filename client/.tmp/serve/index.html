@@ -1,0 +1,162 @@
+<!doctype html>
+<html ng-app="ctnv2">
+  <head>
+    <meta charset="utf-8">
+    <title>ctnv2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-aside/dist/css/angular-aside.css" />
+    <link rel="stylesheet" href="../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="../bower_components/angular-ui-notification/dist/angular-ui-notification.css" />
+    <link rel="stylesheet" href="../bower_components/angular-chart.js/dist/angular-chart.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/index.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view></div>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-aside/dist/js/angular-aside.js"></script>
+    <script src="../bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="../bower_components/ng-scrollbars/dist/scrollbars.min.js"></script>
+    <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="../bower_components/angular-messages/angular-messages.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/malarkey/dist/malarkey.min.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/angular-ui-notification/dist/angular-ui-notification.js"></script>
+    <script src="../bower_components/Chart.js/Chart.js"></script>
+    <script src="../bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/index.module.js"></script>
+    <script src="app/components/webDevTec/webDevTec.service.js"></script>
+    <script src="app/components/navbar/navbar.directive.js"></script>
+    <script src="app/components/malarkey/malarkey.directive.js"></script>
+    <script src="app/components/githubContributor/githubContributor.service.js"></script>
+    <script src="app/auth/oauth2/token.controller.js"></script>
+    <script src="app/auth/oauth2/principal.service.js"></script>
+    <script src="app/auth/oauth2/auth.service.js"></script>
+    <script src="app/auth/oauth2/auth.oauth2.service.js"></script>
+    <script src="app/auth/oauth2/account.service.js"></script>
+    <script src="app/util/base64.service.js"></script>
+    <script src="app/rules/synd-med-int.rule.js"></script>
+    <script src="app/rules/fnd-synd.rule.js"></script>
+    <script src="app/rules/cur-pt.service.js"></script>
+    <script src="app/report/totalbench.controller.js"></script>
+    <script src="app/report/benchmark.controller.js"></script>
+    <script src="app/rd/rd.service.js"></script>
+    <script src="app/rd/finishRD.controller.js"></script>
+    <script src="app/rd/ckl-sup.controller.js"></script>
+    <script src="app/rd/ckl-spb.controller.js"></script>
+    <script src="app/rd/ckl-skin.controller.js"></script>
+    <script src="app/rd/ckl-sb.controller.js"></script>
+    <script src="app/rd/ckl-pt.controller.js"></script>
+    <script src="app/rd/ckl-pain.controller.js"></script>
+    <script src="app/rd/ckl-nutrition.controller.js"></script>
+    <script src="app/rd/ckl-meds.controller.js"></script>
+    <script src="app/rd/ckl-lpv.controller.js"></script>
+    <script src="app/rd/ckl-icuDischarge.controller.js"></script>
+    <script src="app/rd/ckl-hob.controller.js"></script>
+    <script src="app/rd/ckl-goal.controller.js"></script>
+    <script src="app/rd/ckl-glu.controller.js"></script>
+    <script src="app/rd/ckl-fluid.controller.js"></script>
+    <script src="app/rd/ckl-electro.controller.js"></script>
+    <script src="app/rd/ckl-dvt.controller.js"></script>
+    <script src="app/rd/ckl-dvc.controller.js"></script>
+    <script src="app/rd/ckl-drm.controller.js"></script>
+    <script src="app/rd/ckl-cvmeds.controller.js"></script>
+    <script src="app/rd/ckl-anti.controller.js"></script>
+    <script src="app/rd/checklist.controller.js"></script>
+    <script src="app/cms/syndromemodal.controller.js"></script>
+    <script src="app/cms/cms.controller.js"></script>
+    <script src="app/adm/symptom.controller.js"></script>
+    <script src="app/adm/sympotom.directive.js"></script>
+    <script src="app/adm/sob.service.js"></script>
+    <script src="app/adm/sob.controller.js"></script>
+    <script src="app/adm/ptview.controller.js"></script>
+    <script src="app/adm/newadm.controller.js"></script>
+    <script src="app/adm/demo.controller.js"></script>
+    <script src="app/adm/dashboard.directive.js"></script>
+    <script src="app/adm/dashboard.controller.js"></script>
+    <script src="app/adm/bg.controller.js"></script>
+    <script src="app/adm/aside.controller.js"></script>
+    <script src="app/adm/adm.service.js"></script>
+    <script src="app/auth/signin.controller.js"></script>
+    <script src="app/auth/flash.service.js"></script>
+    <script src="app/auth/claim.controller.js"></script>
+    <script src="app/auth/auth.service.js"></script>
+    <script src="app/index.run.js"></script>
+    <script src="app/index.route.js"></script>
+    <script src="app/index.constants.js"></script>
+    <script src="app/index.config.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    
+<script type="text/javascript">
+// if (screen.width < 650) {
+// var ref = document.referrer;
+// var urls = new Array("http://ctnv2-zergxyz.c9users.io/dist/index.html#/signin",
+// "http://testing-certain.rhcloud.com/mobile/#/sign-in");
+// var n = ref.match(urls[0]);
+// var m = ref.match(urls[1]);
+// if ((m!==null) || (n!==null)) {
+// stop;
+// }
+// else if (ref=='') {
+// var r = confirm("Small Display is Detected.\nClick \"OK\" for MOBILE SITE.");
+// if (r==true) {
+//   window.location = "http://testing-certain.rhcloud.com/mobile/#/sign-in";
+//   }
+//   else {
+//   stop ;
+// }
+// }
+// else
+// {
+// window.location = "http://testing-certain.rhcloud.com/mobile/#/sign-in";
+// } 
+// }
+  // if (screen.width <= 750) {
+  //   window.location = "http://testing-certain.rhcloud.com/mobile/#/sign-in";
+  // }
+
+</script>
+  </body>
+</html>
