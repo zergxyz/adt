@@ -1,5 +1,10 @@
 package certain.adt.entity;
 
+import certain.adt.config.CustomDateDeserializer;
+import certain.adt.config.CustomDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -46,6 +51,8 @@ public class User implements Serializable {
 
     @Column(name = "joined_date")
     @Temporal(TemporalType.DATE)
+    @JsonDeserialize(using = CustomDateDeserializer.class)
+    @JsonSerialize(using = CustomDateSerializer.class)
     private Date joinedDate;
 
     @ManyToOne

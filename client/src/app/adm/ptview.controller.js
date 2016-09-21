@@ -6,8 +6,9 @@
     .controller('PTViewModalCtrl', PTViewModalCtrl);
 
   /** @ngInject */
-function PTViewModalCtrl($scope, $uibModalInstance, $state, CurPTService, RDService) {
-   
+function PTViewModalCtrl($scope, $uibModalInstance, $state,
+                         CurPTService, RDService, ADMService) {
+
     
     $scope.dashboard = function () {
       $state.go('dashboard');
@@ -31,13 +32,33 @@ function PTViewModalCtrl($scope, $uibModalInstance, $state, CurPTService, RDServ
                     $state.go('checklist');
                     $uibModalInstance.close();
       });
-     
     }
 
-    // $scope.ok = function(e) {
-    //   $uibModalInstance.close();
-    //   e.stopPropagation();
-    // };
+    $scope.discharge = function() {
+        if (confirm("Are you sure to discharge this patient?")) {
+            // discharge the patient
+            var d = new Date();
+            var today = [
+                d.getFullYear(),
+                (d.getMonth()+1).padLeft(),
+                d.getDate().padLeft()
+            ].join('-')+' ' +
+            [   d.getHours().padLeft(),
+                d.getMinutes().padLeft(),
+                d.getSeconds().padLeft()
+            ].join(':');
+            CurPTService.adm.icuDisDT = today;
+            ADMService.discharge(CurPTService.adm).then(
+                function (response) {
+                    $uibModalInstance.close();
+                    CurPTService.adm={};
+                    $state.go("demo", {}, {reload: true});
+                });
+        } else {
+            // Do nothing!
+            $uibModalInstance.close();
+        }
+    };
     // $scope.cancel = function(e) {
     //   $uibModalInstance.dismiss();
     //   e.stopPropagation();

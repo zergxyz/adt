@@ -12,7 +12,7 @@
         url: '/signup',
         templateUrl: 'app/auth/signup.html',
         controller: 'SignupController',
-        controllerAs: 'signup'
+        controllerAs: 'sp'
       })
       .state('claim', {
         url: '/claim',
@@ -20,12 +20,12 @@
         controller: 'ClaimController',
         controllerAs: 'claim'
       })
-      // .state('token', {
-      //   url: '/token',
-      //   templateUrl: 'app/auth/token.html',
-      //   controller: 'TokenController',
-      //   controllerAs: 'token'
-      // })
+       .state('token', {
+         url: '/token',
+         templateUrl: 'app/auth/token.html',
+         controller: 'TokenController',
+         controllerAs: 'token'
+       })
       .state('signin', {
         url: '/signin',
         templateUrl: 'app/auth/signin.html',

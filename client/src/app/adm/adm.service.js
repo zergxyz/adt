@@ -36,12 +36,21 @@
                     return response;
                 });
     };
+
+    var discharge = function(adm) {
+      return $http.post('http://localhost:8080/adt/api/admissions/discharge',
+                adm)
+                .then(function (response) {
+                    return response;
+                });
+    };
     
     return   {
       data:data,
       getCurrentAdmissions:getCurrentAdmissions,
       saveAdmission:saveAdmission,
-      reAdmit:reAdmit
+      reAdmit:reAdmit,
+      discharge:discharge
     }
     
   }

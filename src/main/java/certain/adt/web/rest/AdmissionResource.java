@@ -71,16 +71,16 @@ public class AdmissionResource {
     }
 
     /**
-     * PUT  /admissions : discharge an existing admission.
+     * POST  /admissions/discharge : discharge an existing admission.
      *
-     * @param the admission to update
+     * @param  admission to discharge
      * @return the ResponseEntity with status 200 (OK) and with body the updated admission,
      * or with status 400 (Bad Request) if the admission is not valid,
      */
-    @RequestMapping(value = "/admissions",
-        method = RequestMethod.PUT,
+    @RequestMapping(value = "/admissions/discharge",
+        method = RequestMethod.POST,
         produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Admission> updateAdmission(@RequestBody Admission admission) {
+    public ResponseEntity<Admission> dischargeAdmission(@RequestBody Admission admission) {
         
         if (admission.getId() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
