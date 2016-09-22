@@ -6,31 +6,59 @@
     .controller('ChecklistController', ChecklistController);
 
   /** @ngInject */
-  function ChecklistController($state, RDService, $uibModal) {
+  function ChecklistController($state, RDService, $uibModal, CurPTService,
+                                                                $aside) {
     var vm = this;
     vm.rdData = RDService.rdData;
+
+    vm.openAside = function(position, backdrop) {
+          vm.asideState = {
+            open: true,
+            position: position
+          };
+
+          function postClose() {
+            vm.asideState.open = false;
+          }
+
+          $aside.open({
+            templateUrl: 'app/rd/rdAside.html',
+            placement: position,
+            size: 'sm',
+            backdrop: backdrop,
+            controller: 'RDAsideController',
+          }).result.then(postClose, postClose);
+    }
     
     vm.printRD = function() {
       window.print();
     }
-    
-    vm.finishRD = function(size) {
-      var modalInstance = $uibModal.open( {
-        animation: true,
-        ariaLabelledBy: 'modal-title',
-        ariaDescribedBy: 'modal-body',
-        templateUrl: 'app/rd/finishRD.html',
-        controller: 'finishRDModalCtrl',
-        backdrop: 'static',
-        size: size,
-        resolve: {
-          
+
+    vm.discharge = function() {
+        if (confirm("Are you sure to discharge this patient?")) {
+            // discharge the patient
+            var d = new Date();
+            var today = [
+                d.getFullYear(),
+                (d.getMonth()+1).padLeft(),
+                d.getDate().padLeft()
+            ].join('-')+' ' +
+            [   d.getHours().padLeft(),
+                d.getMinutes().padLeft(),
+                d.getSeconds().padLeft()
+            ].join(':');
+            CurPTService.adm.icuDisDT = today;
+            ADMService.discharge(CurPTService.adm).then(
+                function (response) {
+                    $uibModalInstance.close();
+                    CurPTService.adm={};
+                    $state.go("demo", {}, {reload: true});
+                });
+        } else {
+            // Do nothing!
         }
-      });
-      modalInstance.result.then(
-      );
-      
-    }
+    };
+
     //sedation break 
     vm.openSB = function(size){ 
       var modalInstance = $uibModal.open( {

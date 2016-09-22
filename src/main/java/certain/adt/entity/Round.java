@@ -34,64 +34,64 @@ public class Round implements Serializable {
     private Date rdDate;
     
     @Column(name = "sedation_break")
-    private String sedationBreak;
+    private String sedationBreak = "";
     
     @Column(name = "delirium")
-    private String delirium;
+    private String delirium ="";
     
     @Column(name = "pain")
-    private String pain;
+    private String pain="";
     
     @Column(name = "cvMeds")
-    private String cvMeds;
+    private String cvMeds="";
     
     @Column(name = "lpv")
-    private String lpv;
+    private String lpv="";
     
     @Column(name = "spb")
-    private String spb;
+    private String spb="";
     
     @Column(name = "hob")
-    private String hob;
+    private String hob="";
     
     @Column(name = "fluid")
-    private String fluid;
+    private String fluid="";
     
     @Column(name = "electrolyte")
-    private String electrolyte;
+    private String electrolyte="";
     
     @Column(name = "glucose")
-    private String glucose;
+    private String glucose="";
     
     @Column(name = "sup")
-    private String sup;
+    private String sup="";
     
     @Column(name = "nutrition")
-    private String nutrition;
+    private String nutrition="";
     
     @Column(name = "dvt")
-    private String dvt;
+    private String dvt="";
     
     @Column(name = "antibio")
-    private String antibio;
+    private String antibio="";
     
     @Column(name = "skin")
-    private String skin;
+    private String skin="";
     
     @Column(name = "meds")
-    private String meds;
+    private String meds="";
     
     @Column(name = "devices")
-    private String devices;
+    private String devices="";
     
     @Column(name = "pt")
-    private String pt;
+    private String pt="";
     
     @Column(name = "goal")
-    private String goal;
+    private String goal="";
     
     @Column(name = "icuDischarge")
-    private String icuDischarge;
+    private String icuDischarge="";
     
     @OneToOne
     @JoinColumn(name = "roundDetail")

@@ -15,271 +15,271 @@ public class RoundDetail implements Serializable {
     private Long              id;
 
     @Column
-    private String            cns_sb_y1;
+    private String            cns_sb_y1="";
     @Column
-    private String            cns_sb_y2;
+    private String            cns_sb_y2="";
     @Column
-    private String            cns_sb_y3;
+    private String            cns_sb_y3="";
     @Column
-    private String            cns_sb_n1;
+    private String            cns_sb_n1="";
     @Column
-    private String            cns_sb_n2;
+    private String            cns_sb_n2="";
     @Column
-    private String            cns_sb_n3;
+    private String            cns_sb_n3="";
     @Column
-    private String            cns_sb_n4;
+    private String            cns_sb_n4="";
     @Column
-    private String            cns_sb_n5;
+    private String            cns_sb_n5="";
     @Column
-    private String            cns_sb_n6;
+    private String            cns_sb_n6="";
     @Column
-    private String            cns_sb_n7;
+    private String            cns_sb_n7="";
     @Column
-    private String            cns_d_y1;
+    private String            cns_d_y1="";
     @Column
-    private String            cns_d_y2;
+    private String            cns_d_y2="";
     @Column
-    private String            cns_d_y3;
+    private String            cns_d_y3="";
     @Column
-    private String            cns_d_y4;
+    private String            cns_d_y4="";
     @Column
-    private String            cns_d_y5;
+    private String            cns_d_y5="";
     @Column
-    private String            cns_d_y6;
+    private String            cns_d_y6="";
     @Column
-    private String            cns_d_n1;
+    private String            cns_d_n1="";
     @Column
-    private String            cns_d_n2;
+    private String            cns_d_n2="";
     @Column
-    private String            cns_d_n3;
+    private String            cns_d_n3="";
     @Column
-    private String            cns_p_y1;
+    private String            cns_p_y1="";
     @Column
-    private String            cns_p_y2;
+    private String            cns_p_y2="";
     @Column
-    private String            cns_p_y3;
+    private String            cns_p_y3="";
     @Column
-    private String            cns_p_y4;
+    private String            cns_p_y4="";
     @Column
-    private String            cns_p_n1;
+    private String            cns_p_n1="";
     @Column
-    private String            cns_p_n2;
+    private String            cns_p_n2="";
     @Column
-    private String            cns_p_n3;
+    private String            cns_p_n3="";
     @Column
-    private String            cns_p_n4;
+    private String            cns_p_n4="";
     @Column
-    private String            cvs_m_y1;
+    private String            cvs_m_y1="";
     @Column
-    private String            cvs_m_y2;
+    private String            cvs_m_y2="";
     @Column
-    private String            cvs_m_y3;
+    private String            cvs_m_y3="";
     @Column
-    private String            cvs_m_y4;
+    private String            cvs_m_y4="";
     @Column
-    private String            cvs_m_n1;
+    private String            cvs_m_n1="";
     @Column
-    private String            cvs_m_n2;
+    private String            cvs_m_n2="";
     @Column
-    private String            cvs_m_n3;
+    private String            cvs_m_n3="";
     @Column
-    private String            cvs_m_n4;
+    private String            cvs_m_n4="";
     @Column
-    private String            cvs_m_n5;
+    private String            cvs_m_n5="";
     @Column
-    private String            resp_l_y1;
+    private String            resp_l_y1="";
     @Column
-    private String            resp_l_y2;
+    private String            resp_l_y2="";
     @Column
-    private String            resp_l_y3;
+    private String            resp_l_y3="";
     @Column
-    private String            resp_l_n1;
+    private String            resp_l_n1="";
     @Column
-    private String            resp_l_n2;
+    private String            resp_l_n2="";
     @Column
-    private String            resp_s_y1;
+    private String            resp_s_y1="";
     @Column
-    private String            resp_s_y2;
+    private String            resp_s_y2="";
     @Column
-    private String            resp_s_n1;
+    private String            resp_s_n1="";
     @Column
-    private String            resp_s_n2;
+    private String            resp_s_n2="";
     @Column
-    private String            resp_s_n3;
+    private String            resp_s_n3="";
     @Column
-    private String            resp_s_n4;
+    private String            resp_s_n4="";
     @Column
-    private String            resp_s_n5;
+    private String            resp_s_n5="";
     @Column
-    private String            resp_h_y1;
+    private String            resp_h_y1="";
     @Column
-    private String            resp_h_y2;
+    private String            resp_h_y2="";
     @Column
-    private String            resp_h_n1;
+    private String            resp_h_n1="";
     @Column
-    private String            resp_h_n2;
+    private String            resp_h_n2="";
     @Column
-    private String            resp_h_n3;
+    private String            resp_h_n3="";
     @Column
-    private String            kidney_f_y1;
+    private String            kidney_f_y1="";
     @Column
-    private String            kidney_f_y2;
+    private String            kidney_f_y2="";
     @Column
-    private String            kidney_f_y3;
+    private String            kidney_f_y3="";
     @Column
-    private String            kidney_f_y4;
+    private String            kidney_f_y4="";
     @Column
-    private String            kidney_f_n1;
+    private String            kidney_f_n1="";
     @Column
-    private String            kidney_f_n2;
+    private String            kidney_f_n2="";
     @Column
-    private String            kidney_e_y1;
+    private String            kidney_e_y1="";
     @Column
-    private String            kidney_e_y2;
+    private String            kidney_e_y2="";
     @Column
-    private String            kidney_e_y3;
+    private String            kidney_e_y3="";
     @Column
-    private String            kidney_e_y4;
+    private String            kidney_e_y4="";
     @Column
-    private String            kidney_e_n1;
+    private String            kidney_e_n1="";
     @Column
-    private String            gi_g_y1;
+    private String            gi_g_y1="";
     @Column
-    private String            gi_g_y2;
+    private String            gi_g_y2="";
     @Column
-    private String            gi_g_y3;
+    private String            gi_g_y3="";
     @Column
-    private String            gi_g_y4;
+    private String            gi_g_y4="";
     @Column
-    private String            gi_g_n1;
+    private String            gi_g_n1="";
     @Column
-    private String            gi_s_y1;
+    private String            gi_s_y1="";
     @Column
-    private String            gi_s_y2;
+    private String            gi_s_y2="";
     @Column
-    private String            gi_s_y3;
+    private String            gi_s_y3="";
     @Column
-    private String            gi_s_y4;
+    private String            gi_s_y4="";
     @Column
-    private String            gi_s_y5;
+    private String            gi_s_y5="";
     @Column
-    private String            gi_s_n1;
+    private String            gi_s_n1="";
     @Column
-    private String            gi_s_n2;
+    private String            gi_s_n2="";
     @Column
-    private String            gi_n_y1;
+    private String            gi_n_y1="";
     @Column
-    private String            gi_n_y2;
+    private String            gi_n_y2="";
     @Column
-    private String            gi_n_y3;
+    private String            gi_n_y3="";
     @Column
-    private String            gi_n_n1;
+    private String            gi_n_n1="";
     @Column
-    private String            gi_n_n2;
+    private String            gi_n_n2="";
     @Column
-    private String            gi_n_n3;
+    private String            gi_n_n3="";
     @Column
-    private String            gi_n_n4;
+    private String            gi_n_n4="";
     @Column
-    private String            hem_dvt_y1;
+    private String            hem_dvt_y1="";
     @Column
-    private String            hem_dvt_y2;
+    private String            hem_dvt_y2="";
     @Column
-    private String            hem_dvt_y3;
+    private String            hem_dvt_y3="";
     @Column
-    private String            hem_dvt_y4;
+    private String            hem_dvt_y4="";
     @Column
-    private String            hem_dvt_n1;
+    private String            hem_dvt_n1="";
     @Column
-    private String            hem_dvt_n2;
+    private String            hem_dvt_n2="";
     @Column
-    private String            hem_dvt_n3;
+    private String            hem_dvt_n3="";
     @Column
-    private String            id_a_y1;
+    private String            id_a_y1="";
     @Column
-    private String            id_a_y2;
+    private String            id_a_y2="";
     @Column
-    private String            id_a_y3;
+    private String            id_a_y3="";
     @Column
-    private String            id_a_y4;
+    private String            id_a_y4="";
     @Column
-    private String            id_a_y5;
+    private String            id_a_y5="";
     @Column
-    private String            id_a_y6;
+    private String            id_a_y6="";
     @Column
-    private String            id_a_n1;
+    private String            id_a_n1="";
     @Column
-    private String            id_a_n2;
+    private String            id_a_n2="";
     @Column
-    private String            skin_s_y1;
+    private String            skin_s_y1="";
     @Column
-    private String            skin_s_y2;
+    private String            skin_s_y2="";
     @Column
-    private String            skin_s_y3;
+    private String            skin_s_y3="";
     @Column
-    private String            skin_s_n1;
+    private String            skin_s_n1="";
     @Column
-    private String            med_m_y1;
+    private String            med_m_y1="";
     @Column
-    private String            med_m_y2;
+    private String            med_m_y2="";
     @Column
-    private String            med_m_n1;
+    private String            med_m_n1="";
     @Column
-    private String            dev_d_y1;
+    private String            dev_d_y1="";
     @Column
-    private String            dev_d_y2;
+    private String            dev_d_y2="";
     @Column
-    private String            dev_d_y3;
+    private String            dev_d_y3="";
     @Column
-    private String            dev_d_y4;
+    private String            dev_d_y4="";
     @Column
-    private String            dev_d_y5;
+    private String            dev_d_y5="";
     @Column
-    private String            dev_d_y6;
+    private String            dev_d_y6="";
     @Column
-    private String            dev_d_y7;
+    private String            dev_d_y7="";
     @Column
-    private String            dev_d_y8;
+    private String            dev_d_y8="";
     @Column
-    private String            dev_d_n1;
+    private String            dev_d_n1="";
     @Column
-    private String            pt_p_y1;
+    private String            pt_p_y1="";
     @Column
-    private String            pt_p_y2;
+    private String            pt_p_y2="";
     @Column
-    private String            pt_p_y3;
+    private String            pt_p_y3="";
     @Column
-    private String            pt_p_n1;
+    private String            pt_p_n1="";
     @Column
-    private String            pt_p_n2;
+    private String            pt_p_n2="";
     @Column
-    private String            goal_s_y1;
+    private String            goal_s_y1="";
     @Column
-    private String            goal_s_y2;
+    private String            goal_s_y2="";
     @Column
-    private String            goal_s_y3;
+    private String            goal_s_y3="";
     @Column
-    private String            goal_s_y4;
+    private String            goal_s_y4="";
     @Column
-    private String            goal_s_y5;
+    private String            goal_s_y5="";
     @Column
-    private String            goal_s_y6;
+    private String            goal_s_y6="";
     @Column
-    private String            goal_s_y7;
+    private String            goal_s_y7="";
     @Column
-    private String            goal_s_y8;
+    private String            goal_s_y8="";
     @Column
-    private String            goal_s_n1;
+    private String            goal_s_n1="";
     @Column
-    private String            dis_i_y1;
+    private String            dis_i_y1="";
     @Column
-    private String            dis_i_y2;
+    private String            dis_i_y2="";
     @Column
-    private String            dis_i_y3;
+    private String            dis_i_y3="";
     @Column
-    private String            dis_i_n1;
+    private String            dis_i_n1="";
     @Column
-    private String            dis_i_n2;
+    private String            dis_i_n2="";
     
     @OneToOne(mappedBy = "rdetail")
     private Round             rd;
